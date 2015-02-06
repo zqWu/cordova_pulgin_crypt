@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.wzq.android.crypt"
+    version="0.0.2">
+
+    <name>crypt</name>
+    <description>cordova plugin crypt</description>
+    <author>wzq</author>
+    <keywords>cordova,plugin,crypt</keywords>
+    <license>Apache 2.0 License</license>
+
+    <asset src="www/test_crypt.html" target="test_crypt.html"/> 
+    <platform name="android">
+
+    	<!-- plugin config -->
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="crypt">
+                <param name="android-package" value="org.wzq.android.crypt.PluginCrypt" />
+            </feature>
+        </config-file>
+
+		<!-- java src code -->
+        <source-file src="src/AbstractCrypter.java" target-dir="src/org/wzq/android/crypt/"/>
+        <source-file src="src/CryptAES.java" target-dir="src/org/wzq/android/crypt/"/>
+        <source-file src="src/ICrypt.java" target-dir="src/org/wzq/android/crypt/"/>
+        <source-file src="src/IOUtils.java" target-dir="src/org/wzq/android/crypt/"/>
+        <source-file src="src/PluginCrypt.java" target-dir="src/org/wzq/android/crypt/"/>
+    </platform>
+
+    <engines>
+        <engine name="cordova" version=">=3.5.0" platform="android"/>
+        <engine name="cordova-plugman" version=">=3.5.0" platform="android"/>
+    </engines>
+
+</plugin>
