@@ -1,5 +1,4 @@
-# cordova_pulgin_mdm
-a cordova mdm plugin
+cordova_pulgin_crypt
 
 
 
